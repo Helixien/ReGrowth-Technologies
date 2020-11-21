@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ========================= BASE ========================= -->
+    <ThingDef Name="RG-Tech_ConditionCauserBase" Abstract="True" ParentName="BuildingBase">
+        <altitudeLayer>Building</altitudeLayer>
+        <pathCost>150</pathCost>
+        <blockWind>true</blockWind>
+        <passability>Impassable</passability>
+        <fillPercent>1.0</fillPercent>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <damageMultipliers>
+            <li>
+                <damageDef>Flame</damageDef>
+                <multiplier>0</multiplier>
+            </li>
+        </damageMultipliers>
+        <building>
+            <claimable>true</claimable>
+        </building>
+        <receivesSignals>true</receivesSignals>
+        <tickerType>Normal</tickerType>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <castEdgeShadows>True</castEdgeShadows>
+        <designationCategory>Misc</designationCategory>
+        <repairEffect>ConstructMetal</repairEffect>
+        <forceDebugSpawnable>true</forceDebugSpawnable>
+        <isMechClusterThreat>true</isMechClusterThreat>
+    </ThingDef>
+
+    <!-- ========================= Weather controller ========================= -->
+    <ThingDef ParentName="RG-Tech_ConditionCauserBase">
+        <defName>RG-Tech_WeatherController</defName>
+        <label>weather controller</label>
+        <description>An ultratech device for controlling weather. Using chemicals and exotic fields, it forces the weather into a particular configuration.</description>
+        <size>(6,6)</size>
+        <castEdgeShadows>True</castEdgeShadows>
+        <graphicData>
+            <texPath>Things/Building/Misc/WeatherController</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6,6)</drawSize>
+            <shadowData>
+                <volume>(5.5,3.5,5.4)</volume>
+                <offset>(0,0,0)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.1, 0.8, 5.8, 4.1)</rect>
+            </damageData>
+        </graphicData>
+        <costList>
+            <Steel>500</Steel>
+            <VFE_ComponentMechanoid>12</VFE_ComponentMechanoid>
+            <ComponentSpacer>2</ComponentSpacer>
+            <MT_ChipWeather>5</MT_ChipWeather>
+        </costList>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+            <WorkToBuild>12000</WorkToBuild>
+            <Flammability>0.2</Flammability>
+            <Beauty>-8</Beauty>
+        </statBases>
+        <passability>Impassable</passability>
+        <canBeUsedUnderRoof>true</canBeUsedUnderRoof>
+        <altitudeLayer>Building</altitudeLayer>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+        <fillPercent>1.0</fillPercent>
+        <uiIconScale>0.9</uiIconScale>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>4000</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="CompProperties_CausesGameCondition">
+                <conditionDef>WeatherController</conditionDef>
+                <compClass>CompCauseGameCondition_ForceWeather</compClass>
+                <worldRange>5</worldRange>
+                <preventConditionStacking>false</preventConditionStacking>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ========================= Climate adjuster ========================= -->
+    <ThingDef ParentName="RG-Tech_ConditionCauserBase">
+        <defName>RG-Tech_ClimateAdjuster</defName>
+        <label>climate adjuster</label>
+        <description>An ultratech device for controlling climate. Using chemicals and exotic fields to manipulate the atmosphere, it shifts the temperature in this region of the world.</description>
+        <size>(6,6)</size>
+        <graphicData>
+            <texPath>Things/Building/Misc/ClimateAdjuster</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6,6)</drawSize>
+            <shadowData>
+                <volume>(5.3,3.5,5.2)</volume>
+                <offset>(0,0,0)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.5, 0.5, 5, 5)</rect>
+            </damageData>
+        </graphicData>
+        <costList>
+            <Steel>500</Steel>
+            <VFE_ComponentMechanoid>10</VFE_ComponentMechanoid>
+            <ComponentSpacer>5</ComponentSpacer>
+            <MT_ChipClimate>5</MT_ChipClimate>
+        </costList>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+            <WorkToBuild>14000</WorkToBuild>
+            <Flammability>0.2</Flammability>
+            <Beauty>-8</Beauty>
+            <Cleanliness>-3</Cleanliness>
+        </statBases>
+        <blockWind>true</blockWind>
+        <passability>Impassable</passability>
+        <canBeUsedUnderRoof>false</canBeUsedUnderRoof>
+        <altitudeLayer>Building</altitudeLayer>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+        <fillPercent>1.0</fillPercent>
+        <uiIconScale>0.9</uiIconScale>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>8000</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="CompProperties_CausesGameCondition_ClimateAdjuster">
+                <conditionDef>ClimateAdjustment</conditionDef>
+                <worldRange>5</worldRange>
+                <preventConditionStacking>false</preventConditionStacking>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

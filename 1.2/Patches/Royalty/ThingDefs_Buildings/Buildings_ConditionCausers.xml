@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WeatherController"]</xpath>
+                    <value>
+                        <killedLeavings>
+                            <MT_ChipWeather>1</MT_ChipWeather>
+                        </killedLeavings>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ClimateAdjuster"]</xpath>
+                    <value>
+                        <killedLeavings>
+                            <MT_ChipClimate>1</MT_ChipClimate>
+                        </killedLeavings>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

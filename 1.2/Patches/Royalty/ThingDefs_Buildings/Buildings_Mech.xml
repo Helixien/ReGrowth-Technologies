@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+          <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="UnstablePowerCell"]/costList</xpath>
+                    <value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Defoliator"]/killedLeavings</xpath>
+                    <value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+                    </value>
+                </li>
+            </operations>
+        </match>
+	</Operation>
+
+</Patch>

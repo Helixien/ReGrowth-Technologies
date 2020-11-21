@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>RG-Tech_WeatherController</defName>
+        <label>weather controler</label>
+        <description>Build a weather controller to control local weather.</description>
+        <baseCost>2500</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>MultiAnalyzer</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>MT_MechanoidTechnology</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>16.00</researchViewX>
+        <researchViewY>0.80</researchViewY>
+    </ResearchProjectDef>
+	
+    <ResearchProjectDef>
+        <defName>RG-Tech_ClimateAdjuster</defName>
+        <label>climate adjuster</label>
+        <description>Build a climate adjuster to control local climate.</description>
+        <baseCost>3500</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>MT_WeatherController</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>MultiAnalyzer</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>17.00</researchViewX>
+        <researchViewY>0.80</researchViewY>
+    </ResearchProjectDef>
+</Defs>

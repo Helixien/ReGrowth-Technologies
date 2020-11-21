@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+          <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MechCapsule"]/costList</xpath>
+                    <value>
+						<VFE_ComponentMechanoid>10</VFE_ComponentMechanoid>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MechAssembler"]/costList</xpath>
+                    <value>
+						<VFE_ComponentMechanoid>10</VFE_ComponentMechanoid>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MechAssembler"]/killedLeavings</xpath>
+                    <value>
+						<VFE_ComponentMechanoid>4</VFE_ComponentMechanoid>
+                    </value>
+                </li>
+            </operations>
+        </match>
+	</Operation>
+
+</Patch>
