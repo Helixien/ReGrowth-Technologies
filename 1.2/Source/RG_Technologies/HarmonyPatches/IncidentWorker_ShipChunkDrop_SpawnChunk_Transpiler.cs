@@ -19,38 +19,35 @@ namespace RG_Technologies
         static HarmonyPatches()
         {
             var harmony = new Harmony("regrowth.rimworld.shipchunks.main");
-            harmony.Patch(AccessTools.Method(typeof(IncidentWorker_ShipChunkDrop), "SpawnChunk"), null, null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler)));
+            harmony.PatchAll();
         }
 
-        public static IEnumerable<CodeInstruction> IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler(IEnumerable<CodeInstruction> instructions)
+        [HarmonyPatch(typeof(IncidentWorker_ShipChunkDrop), "SpawnChunk")]
+        public static class SpawnChunk_Patch
         {
-            MethodInfo chunkSelector = AccessTools.Method(typeof(HarmonyPatches), nameof(SelectChunkFromAvailableOptions));
-
-            List<CodeInstruction> instructionList = instructions.ToList();
-            int i = 0;
-            foreach (CodeInstruction instruction in instructions)
+            public static bool Prefix(IntVec3 pos, Map map)
             {
-                if (instruction.opcode == OpCodes.Ldsfld)
-                {
-                    if (i == 1)
-                    {
-                        instruction.opcode = OpCodes.Call;
-                        instruction.operand = chunkSelector;
-                    }
-                    i++;
-                }
-                yield return instruction;
+                var thingDef = SelectChunkFromAvailableOptions();
+                SkyfallerMaker.SpawnSkyfaller(ThingDefOf.ShipChunkIncoming, thingDef, pos, map);
+                return false;
             }
         }
 
         public static ThingDef SelectChunkFromAvailableOptions()
         {
-            IEnumerable<ThingDef> chunk = from defs in DefDatabase<ThingDef>.AllDefs
-                                          where defs.defName.ToLower().Contains("shipchunk") && !defs.defName.Contains("Incoming")
-                                          select defs;
+            if (Rand.Chance(0.05f))
+            {
+                return DefDatabase<ThingDef>.GetNamed("RG-Tech_MechandoiShipChunk");
+            }
+            else
+            {
+                IEnumerable<ThingDef> chunk = from defs in DefDatabase<ThingDef>.AllDefs
+                                              where defs.defName.ToLower().Contains("shipchunk") && !defs.defName.Contains("Incoming") && defs.defName != "RG-Tech_MechandoiShipChunk"
+                                              select defs;
 
-            return chunk.RandomElement();
+                return chunk.RandomElement();
+            }
+
         }
     }
 }

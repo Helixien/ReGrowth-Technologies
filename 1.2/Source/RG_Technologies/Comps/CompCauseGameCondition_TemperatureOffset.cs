@@ -67,10 +67,14 @@ namespace RG_Technologies
 			{
 				SetTemperatureOffset(temperatureOffset - 50f);
 			});
+			command_Action.disabled = !this.parent.GetComp<CompPowerTrader>().PowerOn;
+			command_Action.disabledReason = "NoPower".Translate();
 			command_Action.hotKey = KeyBindingDefOf.Misc1;
 			yield return command_Action;
 			Command_Action command_Action2 = new Command_Action();
 			command_Action2.defaultLabel = "-10";
+			command_Action2.disabled = !this.parent.GetComp<CompPowerTrader>().PowerOn;
+			command_Action2.disabledReason = "NoPower".Translate();
 			command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Buttons/ChangeClimateMinusMin");
 
 			command_Action2.action = (Action)Delegate.Combine(command_Action2.action, (Action)delegate
@@ -82,7 +86,8 @@ namespace RG_Technologies
 			Command_Action command_Action3 = new Command_Action();
 			command_Action3.defaultLabel = "+10";
 			command_Action3.icon = ContentFinder<Texture2D>.Get("UI/Buttons/ChangeClimatePlusMin");
-
+			command_Action3.disabled = !this.parent.GetComp<CompPowerTrader>().PowerOn;
+			command_Action3.disabledReason = "NoPower".Translate();
 			command_Action3.action = (Action)Delegate.Combine(command_Action3.action, (Action)delegate
 			{
 				SetTemperatureOffset(temperatureOffset + 10f);
@@ -91,6 +96,8 @@ namespace RG_Technologies
 			yield return command_Action3;
 			Command_Action command_Action4 = new Command_Action();
 			command_Action4.defaultLabel = "+50";
+			command_Action4.disabled = !this.parent.GetComp<CompPowerTrader>().PowerOn;
+			command_Action4.disabledReason = "NoPower".Translate();
 			command_Action4.icon = ContentFinder<Texture2D>.Get("UI/Buttons/ChangeClimatePlusMax");
 			command_Action4.action = (Action)Delegate.Combine(command_Action4.action, (Action)delegate
 			{
