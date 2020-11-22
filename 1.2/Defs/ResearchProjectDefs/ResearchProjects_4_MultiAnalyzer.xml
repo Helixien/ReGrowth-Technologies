@@ -10,7 +10,7 @@
             <li>MultiAnalyzer</li>
         </prerequisites>
         <hiddenPrerequisites>
-            <li>MT_MechanoidTechnology</li>
+            <li>Electricity</li>
         </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -27,7 +27,7 @@
         <baseCost>3500</baseCost>
         <techLevel>Ultra</techLevel>
         <prerequisites>
-            <li>MT_WeatherController</li>
+            <li>RG-Tech_WeatherController</li>
         </prerequisites>
         <hiddenPrerequisites>
             <li>MultiAnalyzer</li>
@@ -39,4 +39,5 @@
         <researchViewX>17.00</researchViewX>
         <researchViewY>0.80</researchViewY>
     </ResearchProjectDef>
+
 </Defs>
