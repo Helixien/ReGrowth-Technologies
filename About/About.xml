@@ -23,6 +23,7 @@
     </modDependencies>
 	<loadAfter>
 		<li>ReGrowth.BOTR.Core</li>
+		<li>OskarPotocki.VFE.Mechanoid</li>
 	</loadAfter>
 	<loadBefore>
 		<li>Balthoraz.RimUniverse.BiomesModule</li>
