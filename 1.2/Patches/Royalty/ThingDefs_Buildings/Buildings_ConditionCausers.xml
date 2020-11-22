@@ -11,7 +11,7 @@
                     <xpath>/Defs/ThingDef[defName="WeatherController"]</xpath>
                     <value>
                         <killedLeavings>
-                            <MT_ChipWeather>1</MT_ChipWeather>
+                            <RG-Tech_ChipWeather>1</RG-Tech_ChipWeather>
                         </killedLeavings>
                     </value>
                 </li>
@@ -19,7 +19,7 @@
                     <xpath>/Defs/ThingDef[defName="ClimateAdjuster"]</xpath>
                     <value>
                         <killedLeavings>
-                            <MT_ChipClimate>1</MT_ChipClimate>
+                            <RG-Tech_ChipClimate>1</RG-Tech_ChipClimate>
                         </killedLeavings>
                     </value>
                 </li>
