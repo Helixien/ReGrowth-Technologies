@@ -30,8 +30,8 @@
         <castEdgeShadows>True</castEdgeShadows>
         <designationCategory>Misc</designationCategory>
         <repairEffect>ConstructMetal</repairEffect>
-        <forceDebugSpawnable>true</forceDebugSpawnable>
-        <isMechClusterThreat>true</isMechClusterThreat>
+        <forceDebugSpawnable>false</forceDebugSpawnable>
+        <isMechClusterThreat>false</isMechClusterThreat>
     </ThingDef>
 
     <!-- ========================= Weather controller ========================= -->
@@ -57,7 +57,7 @@
             <Steel>500</Steel>
             <VFE_ComponentMechanoid>12</VFE_ComponentMechanoid>
             <ComponentSpacer>2</ComponentSpacer>
-            <MT_ChipWeather>5</MT_ChipWeather>
+            <RG-Tech_ChipWeather>2</RG-Tech_ChipWeather>
         </costList>
         <statBases>
             <MaxHitPoints>1500</MaxHitPoints>
@@ -112,7 +112,7 @@
             <Steel>500</Steel>
             <VFE_ComponentMechanoid>10</VFE_ComponentMechanoid>
             <ComponentSpacer>5</ComponentSpacer>
-            <MT_ChipClimate>5</MT_ChipClimate>
+            <RG-Tech_ChipClimate>2</RG-Tech_ChipClimate>
         </costList>
         <statBases>
             <MaxHitPoints>1500</MaxHitPoints>
