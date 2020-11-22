@@ -8,7 +8,7 @@
         <thingClass>Building</thingClass>
         <graphicData>
             <texPath>Things/Building/Power/LavaGenerator/LavaGenerator</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(3,3)</drawSize>
             <shadowData>
                 <volume>(3.03,0.5,2.75)</volume>
@@ -37,7 +37,7 @@
             <Steel>250</Steel>
             <ComponentIndustrial>7</ComponentIndustrial>
         </costList>
-        <rotatable>false</rotatable>
+        <rotatable>true</rotatable>
         <placeWorkers>
 			<li>RG_Technologies.PlaceWorker_OnLavaTerrains</li>
         </placeWorkers>
