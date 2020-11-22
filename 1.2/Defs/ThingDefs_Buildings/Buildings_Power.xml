@@ -37,7 +37,7 @@
             <Steel>250</Steel>
             <ComponentIndustrial>7</ComponentIndustrial>
         </costList>
-        <rotatable>false</rotatable>
+        <rotatable>true</rotatable>
         <placeWorkers>
         </placeWorkers>
         <designationCategory>Power</designationCategory>
