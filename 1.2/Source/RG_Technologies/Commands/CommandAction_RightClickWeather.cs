@@ -21,12 +21,15 @@ namespace RG_Technologies
         {
             get
             {
-                foreach (WeatherDef weatherDef in DefDatabase<WeatherDef>.AllDefsListForReading)
+                if (comp.parent.GetComp<CompPowerTrader>().PowerOn)
                 {
-                    yield return new FloatMenuOption(weatherDef.LabelCap, delegate
+                    foreach (WeatherDef weatherDef in DefDatabase<WeatherDef>.AllDefsListForReading)
                     {
-                        comp.ChangeWeather(weatherDef);
-                    }, MenuOptionPriority.Default, null, null, 29f, null, null);
+                        yield return new FloatMenuOption(weatherDef.LabelCap, delegate
+                        {
+                            comp.ChangeWeather(weatherDef);
+                        }, MenuOptionPriority.Default, null, null, 29f, null, null);
+                    }
                 }
             }
         }

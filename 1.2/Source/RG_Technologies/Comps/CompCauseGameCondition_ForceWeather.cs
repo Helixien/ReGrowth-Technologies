@@ -31,6 +31,8 @@ namespace RG_Technologies
 			CommandAction_RightClickWeather command_Action = new CommandAction_RightClickWeather(this);
 			command_Action.defaultLabel = weather.LabelCap;
 			command_Action.icon = ContentFinder<Texture2D>.Get("UI/Buttons/ChangeWeather");
+			command_Action.disabled = !this.parent.GetComp<CompPowerTrader>().PowerOn;
+			command_Action.disabledReason = "NoPower".Translate();
 			command_Action.action = delegate
 			{
 				List<WeatherDef> allDefsListForReading = DefDatabase<WeatherDef>.AllDefsListForReading;
