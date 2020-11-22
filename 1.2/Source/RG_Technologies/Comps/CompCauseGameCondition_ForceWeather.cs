@@ -28,7 +28,7 @@ namespace RG_Technologies
 
 		public override IEnumerable<Gizmo> CompGetGizmosExtra()
 		{
-			Command_Action command_Action = new Command_Action();
+			CommandAction_RightClickWeather command_Action = new CommandAction_RightClickWeather(this);
 			command_Action.defaultLabel = weather.LabelCap;
 			command_Action.icon = ContentFinder<Texture2D>.Get("UI/Buttons/ChangeWeather");
 			command_Action.action = delegate
@@ -40,13 +40,17 @@ namespace RG_Technologies
 				{
 					num = 0;
 				}
-				weather = allDefsListForReading[num];
-				ReSetupAllConditions();
+				ChangeWeather(allDefsListForReading[num]);
 			};
 			command_Action.hotKey = KeyBindingDefOf.Misc1;
 			yield return command_Action;
 		}
 
+		public void ChangeWeather(WeatherDef newWeather)
+        {
+			weather = newWeather;
+			ReSetupAllConditions();
+		}
 		protected override void SetupCondition(GameCondition condition, Map map)
 		{
 			base.SetupCondition(condition, map);

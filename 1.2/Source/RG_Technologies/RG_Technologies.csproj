@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandAction_RightClickWeather.cs" />
     <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
     <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
