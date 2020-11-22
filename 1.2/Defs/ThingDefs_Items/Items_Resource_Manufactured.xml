@@ -1,88 +1,88 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="ResourceBase">
-    <defName>VFE_ComponentMechanoid</defName>
-    <label>mechanoid component</label>
-    <description>mechanoid computing, energy-directing machinery and scrap, hardened for the most demanding applications.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/ComponentMechanoid</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>50</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <statBases>
-      <MaxHitPoints>60</MaxHitPoints>
-      <MarketValue>280</MarketValue>
-      <Mass>0.8</Mass>
-      <Flammability>0.4</Flammability>
-      <DeteriorationRate>1.2</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-    <tradeTags>
-      <li>ExoticMisc</li>
-    </tradeTags>
-  </ThingDef>
-  
-  <ThingDef ParentName="ResourceBase">
-    <defName>RG-Tech_ChipWeather</defName>
-    <label>weather control chip</label>
-    <description>A small control chip used to access a remote satalite in orbit.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/ChipWeather</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>10</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <statBases>
-      <MaxHitPoints>20</MaxHitPoints>
-      <MarketValue>520</MarketValue>
-      <Mass>0.2</Mass>
-      <Flammability>0.4</Flammability>
-      <DeteriorationRate>1.0</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-    <tradeTags>
-      <li>ExoticMisc</li>
-    </tradeTags>
-  </ThingDef>
-  
-  <ThingDef ParentName="ResourceBase">
-    <defName>RG-Tech_ChipClimate</defName>
-    <label>climate control chip</label>
-    <description>A small control chip used to access a remote satalite in orbit.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/ChipClimate</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>10</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <statBases>
-      <MaxHitPoints>20</MaxHitPoints>
-      <MarketValue>520</MarketValue>
-      <Mass>0.2</Mass>
-      <Flammability>0.4</Flammability>
-      <DeteriorationRate>1.0</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-    <tradeTags>
-      <li>ExoticMisc</li>
-    </tradeTags>
-  </ThingDef>
-  
+    <ThingDef ParentName="ResourceBase">
+        <defName>VFE_ComponentMechanoid</defName>
+        <label>mechanoid component</label>
+        <description>mechanoid computing, energy-directing machinery and scrap, hardened for the most demanding applications.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ComponentMechanoid</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>280</MarketValue>
+            <Mass>0.8</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>1.2</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>RG-Tech_ChipWeather</defName>
+        <label>weather control chip</label>
+        <description>A small control chip used to access a remote satalite in orbit.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ChipWeather</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>10</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <MarketValue>520</MarketValue>
+            <Mass>0.2</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>1.0</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>RG-Tech_ChipClimate</defName>
+        <label>climate control chip</label>
+        <description>A small control chip used to access a remote satalite in orbit.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ChipClimate</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>10</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <MarketValue>520</MarketValue>
+            <Mass>0.2</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>1.0</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
 </Defs>
