@@ -39,6 +39,7 @@
         </costList>
         <rotatable>false</rotatable>
         <placeWorkers>
+			<li>RG_Technologies.PlaceWorker_OnLavaTerrains</li>
         </placeWorkers>
         <designationCategory>Power</designationCategory>
         <building>

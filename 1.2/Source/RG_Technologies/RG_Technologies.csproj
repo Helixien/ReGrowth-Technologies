@@ -45,6 +45,7 @@
     <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
     <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
     <Compile Include="HarmonyPatches\IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler.cs" />
+    <Compile Include="PlaceWorkers\IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
