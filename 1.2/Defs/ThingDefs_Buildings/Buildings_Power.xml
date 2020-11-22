@@ -25,6 +25,7 @@
         <fillPercent>1</fillPercent>
         <blockLight>true</blockLight>
         <canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>RG_Lava</terrainAffordanceNeeded>
         <statBases>
             <MaxHitPoints>500</MaxHitPoints>
             <WorkToBuild>15000</WorkToBuild>
