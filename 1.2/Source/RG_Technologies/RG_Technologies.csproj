@@ -44,11 +44,15 @@
     <Compile Include="Commands\CommandAction_RightClickWeather.cs" />
     <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
     <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
+    <Compile Include="HarmonyPatches\IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.2.2753</Version>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

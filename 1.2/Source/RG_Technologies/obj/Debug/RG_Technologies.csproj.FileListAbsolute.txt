@@ -4,3 +4,4 @@ c:\GAMES\Rimworld\Mods\ReGrowth-Technologies\1.2\Source\RG_Technologies\obj\Debu
 c:\GAMES\Rimworld\Mods\ReGrowth-Technologies\1.2\Source\RG_Technologies\obj\Debug\RG_Technologies.csproj.CoreCompileInputs.cache
 c:\GAMES\Rimworld\Mods\ReGrowth-Technologies\1.2\Source\RG_Technologies\obj\Debug\RG_Technologies.dll
 c:\GAMES\Rimworld\Mods\ReGrowth-Technologies\1.2\Source\RG_Technologies\obj\Debug\RG_Technologies.pdb
+c:\GAMES\Rimworld\Mods\ReGrowth-Technologies\1.2\Source\RG_Technologies\obj\Debug\RG_Technologies.csproj.CopyComplete

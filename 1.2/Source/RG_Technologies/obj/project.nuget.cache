@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "CvxtcBmhWdNc0M12KzbSeJqhbXOY5+MU7HPNTr8ACq/cURkiR7enNkMkIHHRcz+BNBK+euRw0qOgRcOgcNrMPA==",
+  "dgSpecHash": "jn/hVactAGZ6/23cuagUK+FybF+W0X45SH39cA59M8OC0YZxhQCZvvYI+6BD+9v6KdYcjnO3yVYmCKsbS7j9Nw==",
   "success": true,
   "projectFilePath": "c:\\GAMES\\Rimworld\\Mods\\ReGrowth-Technologies\\1.2\\Source\\RG_Technologies\\RG_Technologies.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.2.2753\\krafs.rimworld.ref.1.2.2753.nupkg.sha512"
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.2.2753\\krafs.rimworld.ref.1.2.2753.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.0.4\\lib.harmony.2.0.4.nupkg.sha512"
   ],
   "logs": []
 }
