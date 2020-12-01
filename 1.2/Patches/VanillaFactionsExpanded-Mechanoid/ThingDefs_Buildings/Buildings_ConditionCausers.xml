@@ -8,11 +8,9 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VFE_ClimateAdjuster"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="VFE_ClimateAdjuster"]/killedLeavings</xpath>
                     <value>
-                        <killedLeavings>
-                            <RG-Tech_ChipClimate>1</RG-Tech_ChipClimate>
-                        </killedLeavings>
+						<RG-Tech_ChipClimate>1</RG-Tech_ChipClimate>
                     </value>
                 </li>
             </operations>
